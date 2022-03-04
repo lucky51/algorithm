@@ -39,3 +39,10 @@ func TestMinDepth(t *testing.T) {
 func TestOpenLock(t *testing.T) {
 	fmt.Println(openLock([][]rune{{'9', '9', '9', '8'}}, "9999"))
 }
+
+func TestOpenLockDouble(t *testing.T) {
+	m := map[string]struct{}{
+		"9998": {},
+	}
+	fmt.Println(openLockDouble(m, "9999"))
+}
