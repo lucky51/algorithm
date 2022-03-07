@@ -6,8 +6,7 @@ import (
 )
 
 func TestCheckInclusion(t *testing.T) {
-	fmt.Println(checkInclusion("helloworld", "oll"))
-
+	fmt.Println(checkInclusion("eidboaoo", "ab"))
 }
 
 func TestRespliceSlice(t *testing.T) {
@@ -16,5 +15,15 @@ func TestRespliceSlice(t *testing.T) {
 }
 
 func TestMinWindow(t *testing.T) {
+
 	fmt.Println(minWindow("ADBECFEBANC", "ABC"))
+	fmt.Println(minWindow1("ADBECFEBANC", "ABC"))
+}
+
+func TestFindAnagrams(t *testing.T) {
+	fmt.Println(findAnagrams("baa", "aa"))
+}
+
+func TestLengthOfLongestSubstring(t *testing.T) {
+	fmt.Println(lengthOfLongestSubstring("bbbbb"))
 }
