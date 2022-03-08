@@ -1,4 +1,4 @@
-package coinchange
+package dpquestions
 
 import "math"
 
