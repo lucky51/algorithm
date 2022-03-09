@@ -70,3 +70,15 @@ func TestEditMinDistance(t *testing.T) {
 	fmt.Println(editminDistance("dinitrophenylhydrazine", "benzalphenylhydrazone"))
 	fmt.Println(editMinDistancebyDPTable("dinitrophenylhydrazine", "benzalphenylhydrazone"))
 }
+
+func TestLongestPalindRomeSubSeq(t *testing.T) {
+	/*
+		[1 1 1 3 5]
+		[0 1 1 3 3]
+		[0 0 1 1 1]
+		[0 0 0 1 1]
+		[0 0 0 0 1]
+
+	*/
+	fmt.Println(longestPalindRomeSubseq("abcba"))
+}
