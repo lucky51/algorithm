@@ -46,3 +46,27 @@ func TestMaxSubArraySlim(t *testing.T) {
 	fmt.Println(maxSubArraySlim([]int{-3, 1, 3, -1, 2, -4, 2}))
 	fmt.Println(maxSubArraySlim([]int{1}))
 }
+
+func TestLongestCommonSubsequence(t *testing.T) {
+	fmt.Println(longestCommonSubsequence("abcde", "ace"))
+	fmt.Println(longestCommonSubsequence("abc", "abc"))
+	fmt.Println(longestCommonSubsequenceSlim("abcde", "ace"))
+	fmt.Println(longestCommonSubsequenceSlim("abc", "abc"))
+}
+func TestMinDistance(t *testing.T) {
+	fmt.Println(minDistance("sea", "eat"))
+}
+
+func TestMinimumDeleteSum(t *testing.T) {
+	fmt.Println(minimumDeleteSum("delete", "leet"))
+}
+func TestAscII(t *testing.T) {
+	var s = "seaeat"
+	for i := 0; i < len(s); i++ {
+		fmt.Println(s[i])
+	}
+}
+func TestEditMinDistance(t *testing.T) {
+	fmt.Println(editminDistance("dinitrophenylhydrazine", "benzalphenylhydrazone"))
+	fmt.Println(editMinDistancebyDPTable("dinitrophenylhydrazine", "benzalphenylhydrazone"))
+}
