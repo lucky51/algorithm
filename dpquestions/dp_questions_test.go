@@ -87,3 +87,8 @@ func TestLongestPalindRomeSubSeq(t *testing.T) {
 func TestIsMatch(t *testing.T) {
 	fmt.Println(isMatch("zaaab", ".a*b"))
 }
+
+func TestMaxA(t *testing.T) {
+	fmt.Println(maxA(10, 0, 0))
+	fmt.Println(maxANew(10))
+}
