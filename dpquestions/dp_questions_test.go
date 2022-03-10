@@ -61,10 +61,8 @@ func TestMinimumDeleteSum(t *testing.T) {
 	fmt.Println(minimumDeleteSum("delete", "leet"))
 }
 func TestAscII(t *testing.T) {
-	var s = "seaeat"
-	for i := 0; i < len(s); i++ {
-		fmt.Println(s[i])
-	}
+	var s = "."
+	fmt.Println(s[0] == '.')
 }
 func TestEditMinDistance(t *testing.T) {
 	fmt.Println(editminDistance("dinitrophenylhydrazine", "benzalphenylhydrazone"))
@@ -80,5 +78,12 @@ func TestLongestPalindRomeSubSeq(t *testing.T) {
 		[0 0 0 0 1]
 
 	*/
-	fmt.Println(longestPalindRomeSubseq("abcba"))
+	//	fmt.Println(longestPalindRomeSubseq("bbbab"))
+	//fmt.Println(longestPalindRomeSubseqSlime("bbbab"))
+	fmt.Println(minInsertions("zzazz"))
+	fmt.Println(minInsertionsSlime("zzazz"))
+}
+
+func TestIsMatch(t *testing.T) {
+	fmt.Println(isMatch("zaaab", ".a*b"))
 }
