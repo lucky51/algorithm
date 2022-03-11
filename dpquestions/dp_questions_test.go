@@ -63,6 +63,7 @@ func TestMinimumDeleteSum(t *testing.T) {
 func TestAscII(t *testing.T) {
 	var s = "."
 	fmt.Println(s[0] == '.')
+	fmt.Println(10 << 4) //1010
 }
 func TestEditMinDistance(t *testing.T) {
 	fmt.Println(editminDistance("dinitrophenylhydrazine", "benzalphenylhydrazone"))
@@ -91,4 +92,21 @@ func TestIsMatch(t *testing.T) {
 func TestMaxA(t *testing.T) {
 	fmt.Println(maxA(10, 0, 0))
 	fmt.Println(maxANew(10))
+}
+
+func TestSuperEggDrop(t *testing.T) {
+	//fmt.Println(superEggDrop(2, 6))
+	fmt.Println(superEggDropOptimize(2, 6))
+	fmt.Println(superEggDropForDpTable(2, 6))
+}
+
+func TestDpMaxCoins(t *testing.T) {
+
+	fmt.Println(maxCoins([]int{3, 1, 5, 8}))
+}
+func TestKnapsack(t *testing.T) {
+	fmt.Println(knapsack(4, 3, []int{2, 1, 3}, []int{4, 2, 3}))
+}
+func TestCanPartition(t *testing.T) {
+	fmt.Println(canPartition([]int{1, 2, 3, 5}))
 }

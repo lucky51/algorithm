@@ -25,3 +25,7 @@ func TestNQueens(t *testing.T) {
 		fmt.Println("=============")
 	}
 }
+
+func TestMaxScore(t *testing.T) {
+	fmt.Println(maxCoins([]int{3, 1, 5, 8}))
+}
