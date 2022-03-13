@@ -110,3 +110,11 @@ func TestKnapsack(t *testing.T) {
 func TestCanPartition(t *testing.T) {
 	fmt.Println(canPartition([]int{1, 2, 3, 5}))
 }
+
+func TestChange(t *testing.T) {
+	fmt.Println(change(5, []int{1, 2, 5}))
+}
+func TestRob(t *testing.T) {
+	fmt.Println(rob([]int{1, 2, 5}))
+	fmt.Println(robdpt([]int{1, 2, 5}))
+}
