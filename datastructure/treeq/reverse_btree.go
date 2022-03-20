@@ -1,4 +1,4 @@
-package treequestions
+package treeq
 
 import "github.com/lucky51/pkg/tree"
 
