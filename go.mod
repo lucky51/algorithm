@@ -3,7 +3,7 @@ module github.com/lucky51/algorithm
 go 1.18
 
 require (
-	github.com/lucky51/pkg v0.0.5
+	github.com/lucky51/pkg v0.0.7
 	github.com/stretchr/testify v1.7.0
 )
 
