@@ -12,7 +12,7 @@ func nextGreaterElement(nums []int) []int {
 	for i := len(nums) - 1; i >= 0; i-- {
 		for !s.IsEmpty() {
 			top, _ := s.Peek()
-			if *top.Data <= nums[i] {
+			if top.Data <= nums[i] {
 				s.Pop()
 			} else {
 				break
@@ -22,9 +22,9 @@ func nextGreaterElement(nums []int) []int {
 			res[i] = -1
 		} else {
 			top, _ := s.Peek()
-			res[i] = *top.Data
+			res[i] = top.Data
 		}
-		s.Push(&nums[i])
+		s.Push(nums[i])
 	}
 	return res
 }
@@ -38,7 +38,7 @@ func dailyTemperatures(nums []int) []int {
 	for i := len(nums) - 1; i >= 0; i-- {
 		for !s.IsEmpty() {
 			top, _ := s.Peek()
-			if *top.Data <= nums[i] {
+			if top.Data <= nums[i] {
 				s.Pop()
 			} else {
 				break
@@ -48,9 +48,9 @@ func dailyTemperatures(nums []int) []int {
 			res[i] = 0
 		} else {
 			top, _ := s.Peek()
-			res[i] = *top.Data - i
+			res[i] = top.Data - i
 		}
-		s.Push(&i)
+		s.Push(i)
 	}
 	return res
 }
@@ -65,7 +65,7 @@ func nextGreaterElementCycle(nums []int) []int {
 	for i := 2 * (n - 1); i >= 0; i-- {
 		for s.IsEmpty() {
 			top, _ := s.Peek()
-			if *top.Data <= nums[i%n] {
+			if top.Data <= nums[i%n] {
 				s.Pop()
 			} else {
 				break
@@ -75,9 +75,9 @@ func nextGreaterElementCycle(nums []int) []int {
 			res[i%n] = -1
 		} else {
 			top, _ := s.Peek()
-			res[i%n] = *top.Data
+			res[i%n] = top.Data
 		}
-		s.Push(&nums[i%n])
+		s.Push(nums[i%n])
 	}
 	return res
 }

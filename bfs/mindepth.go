@@ -10,7 +10,7 @@ func minDepth(root *tree.TreeNode) int {
 	if root == nil {
 		return 0
 	}
-	q := queue.NewQueue[tree.TreeNode]()
+	q := queue.NewQueue[*tree.TreeNode]()
 	q.Offer(root)
 	depth := 1
 	for !q.IsEmpty() {

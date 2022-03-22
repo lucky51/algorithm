@@ -25,32 +25,32 @@ func openLock(deadends [][]rune, target string) int {
 	q := queue.NewQueue[[]rune]()
 	start := []rune{'0', '0', '0', '0'}
 	visited["0000"] = true
-	q.Offer(&start)
+	q.Offer(start)
 	for !q.IsEmpty() {
 		len := int(q.Size())
 		for i := 0; i < len; i++ {
 			cur := q.Poll()
-			if _, ok := deadendslocksDict[string(*cur)]; ok {
+			if _, ok := deadendslocksDict[string(cur)]; ok {
 				continue
 			}
-			if string(*cur) == target {
+			if string(cur) == target {
 				return step
 			}
 			// 选取将当前元素的所有相邻节点
 			for j := 0; j < 4; j++ {
 				// up
-				up := scrollUp(*cur, j)
+				up := scrollUp(cur, j)
 				// 访问过的不处理
 				if _, ok := visited[string(up)]; !ok {
-					q.Offer(&up)
+					q.Offer(up)
 					visited[string(up)] = true
 				}
 
 				//down
-				down := scrollDown(*cur, j)
+				down := scrollDown(cur, j)
 				// 访问过的不处理
 				if _, ok := visited[string(down)]; !ok {
-					q.Offer(&down)
+					q.Offer(down)
 					visited[string(down)] = true
 				}
 
