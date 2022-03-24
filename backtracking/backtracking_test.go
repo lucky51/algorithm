@@ -29,3 +29,21 @@ func TestNQueens(t *testing.T) {
 func TestMaxScore(t *testing.T) {
 	fmt.Println(maxCoins([]int{3, 1, 5, 8}))
 }
+
+func TestSubSets(t *testing.T) {
+	fmt.Println(subsets([]int{1, 2, 3}))
+}
+
+func TestSlicePointerAddress(t *testing.T) {
+	a := make([]int, 0, 4)
+	a = append(a, 1)
+	b := a
+	b = append(b, 66)
+	fmt.Println(a[1:])
+	fmt.Printf("%p\n", &a)
+	fmt.Printf("%p\n", &b)
+}
+
+func TestSubsetsWithDup(t *testing.T) {
+	fmt.Println(subsetsWithDup([]int{1, 2, 2}))
+}

@@ -39,3 +39,35 @@ func backtrack(nums []int, track []int) {
 	}
 
 }
+
+var resnew [][]int
+var tracksnew []int
+var used map[int]bool
+
+func permuteNew(nums []int) [][]int {
+	resnew = make([][]int, 0)
+	tracksnew = make([]int, 0)
+	used = make(map[int]bool, 0)
+	backtrackNew(nums)
+	return res
+}
+func backtrackNew(nums []int) {
+	if len(nums) == len(tracksnew) {
+		// 到达子节点
+		tracksnewCopy := make([]int, len(tracksnew))
+		copy(tracksnewCopy, tracksnew)
+		res = append(res, tracksnewCopy)
+		return
+	}
+	for i := 0; i < len(nums); i++ {
+		if v, ok := used[i]; ok && v {
+			continue
+		}
+		//select
+		tracksnew = append(tracksnew, nums[i])
+		used[i] = true
+		backtrackNew(nums)
+		used[i] = false
+		tracksnew = tracksnew[:len(tracksnew)-1]
+	}
+}
