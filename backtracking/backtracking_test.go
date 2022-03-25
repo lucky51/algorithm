@@ -47,3 +47,6 @@ func TestSlicePointerAddress(t *testing.T) {
 func TestSubsetsWithDup(t *testing.T) {
 	fmt.Println(subsetsWithDup([]int{1, 2, 2}))
 }
+func TestCombinationSum(t *testing.T) {
+	fmt.Println(combinationSum([]int{2, 3, 6, 7}, 7))
+}
