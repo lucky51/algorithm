@@ -50,3 +50,30 @@ func TestSubsetsWithDup(t *testing.T) {
 func TestCombinationSum(t *testing.T) {
 	fmt.Println(combinationSum([]int{2, 3, 6, 7}, 7))
 }
+func TestRune(t *testing.T) {
+	fmt.Printf("%d", byte('.'))
+	fmt.Println(46 == '.')
+}
+func TestSudoKu(t *testing.T) {
+	b := [][]byte{
+		{'5', '3', '.', '.', '7', '.', '.', '.', '.'},
+		{'6', '.', '.', '1', '9', '5', '.', '.', '.'},
+		{'.', '9', '8', '.', '.', '.', '.', '6', '.'},
+		{'8', '.', '.', '.', '6', '.', '.', '.', '3'},
+		{'4', '.', '.', '8', '.', '3', '.', '.', '1'},
+		{'7', '.', '.', '.', '2', '.', '.', '.', '6'},
+		{'.', '6', '.', '.', '.', '.', '2', '8', '.'},
+		{'.', '.', '.', '4', '1', '9', '.', '.', '5'},
+		{'.', '.', '.', '.', '8', '.', '.', '7', '9'}}
+	solveSudoku(b)
+	for i := 0; i < len(b); i++ {
+		for j := 0; j < len(b); j++ {
+			fmt.Printf("%s,", string(rune(b[i][j])))
+		}
+		fmt.Println("")
+	}
+}
+func TestGenerateParenthesis(t *testing.T) {
+	res := generateParenthesis(3)
+	fmt.Println(res)
+}
