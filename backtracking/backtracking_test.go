@@ -77,3 +77,14 @@ func TestGenerateParenthesis(t *testing.T) {
 	res := generateParenthesis(3)
 	fmt.Println(res)
 }
+
+func TestPerfectNumber(t *testing.T) {
+	result := getPerfectNumber(100)
+	result1 := getPerfectNumber(2244)
+	result2 := getPerfectNumber(3000)
+	result3 := getPerfectNumber(3355)
+	fmt.Println(result)
+	fmt.Println(result1)
+	fmt.Println(result2)
+	fmt.Println(result3)
+}
