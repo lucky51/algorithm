@@ -46,3 +46,11 @@ func TestMaxAreaOfIsland(t *testing.T) {
 	}
 	fmt.Println(maxAreaOfIsland(arr))
 }
+func TestCountSumIslands(t *testing.T) {
+	grid1 := [][]int{{1, 1, 1, 0, 0}, {0, 1, 1, 1, 1}, {0, 0, 0, 0, 0}, {1, 0, 0, 0, 0}, {1, 1, 0, 1, 1}}
+	grid2 := [][]int{{1, 1, 1, 0, 0}, {0, 0, 1, 1, 1}, {0, 1, 0, 0, 0}, {1, 0, 1, 1, 0}, {0, 1, 0, 1, 0}}
+	res := countSubIslands(grid1, grid2)
+	grid3 := [][]int{{1, 0, 1, 0, 1}, {1, 1, 1, 1, 1}, {0, 0, 0, 0, 0}, {1, 1, 1, 1, 1}, {1, 0, 1, 0, 1}}
+	grid4 := [][]int{{0, 0, 0, 0, 0}, {1, 1, 1, 1, 1}, {0, 1, 0, 1, 0}, {0, 1, 0, 1, 0}, {1, 0, 0, 0, 1}}
+	fmt.Println("result :", res, countSubIslands(grid3, grid4))
+}

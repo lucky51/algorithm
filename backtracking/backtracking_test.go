@@ -2,6 +2,7 @@ package backtracking
 
 import (
 	"fmt"
+	"github.com/lucky51/pkg/tree"
 	"testing"
 )
 
@@ -87,4 +88,38 @@ func TestPerfectNumber(t *testing.T) {
 	fmt.Println(result1)
 	fmt.Println(result2)
 	fmt.Println(result3)
+}
+
+func TestPathSum(t *testing.T) {
+	var root = &tree.TreeNode{
+		Val: 5,
+		Left: &tree.TreeNode{
+			Val: 4,
+			Left: &tree.TreeNode{
+				Val: 11,
+				Left: &tree.TreeNode{
+					Val: 7,
+				}, Right: &tree.TreeNode{
+					Val: 2,
+				},
+			},
+		},
+		Right: &tree.TreeNode{
+			Val: 8,
+			Left: &tree.TreeNode{
+				Val: 13,
+			},
+			Right: &tree.TreeNode{
+				Val: 4,
+				Left: &tree.TreeNode{
+					Val: 5,
+				},
+				Right: &tree.TreeNode{
+					Val: 1,
+				},
+			},
+		},
+	}
+	fmt.Println(pathSum(root, 22))
+
 }
