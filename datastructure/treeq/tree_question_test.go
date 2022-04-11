@@ -49,3 +49,7 @@ func TestBuildTreePost(t *testing.T) {
 	root := buildTreePost([]int{9, 3, 15, 20, 7}, []int{9, 15, 7, 20, 3})
 	tree.PreOrderTree(root)
 }
+
+func TestNumTrees(t *testing.T) {
+	fmt.Println(numTrees(3))
+}
