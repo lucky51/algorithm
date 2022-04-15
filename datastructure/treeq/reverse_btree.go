@@ -3,7 +3,7 @@ package treeq
 import "github.com/lucky51/pkg/tree"
 
 // reverseTree 翻转二叉树
-func reverseTree(root *tree.TreeNode) {
+func reverseTree(root *tree.Node[int]) {
 	if root == nil {
 		return
 	}

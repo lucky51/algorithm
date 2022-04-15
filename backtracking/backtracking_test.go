@@ -91,30 +91,30 @@ func TestPerfectNumber(t *testing.T) {
 }
 
 func TestPathSum(t *testing.T) {
-	var root = &tree.TreeNode{
+	var root = &tree.Node[int]{
 		Val: 5,
-		Left: &tree.TreeNode{
+		Left: &tree.Node[int]{
 			Val: 4,
-			Left: &tree.TreeNode{
+			Left: &tree.Node[int]{
 				Val: 11,
-				Left: &tree.TreeNode{
+				Left: &tree.Node[int]{
 					Val: 7,
-				}, Right: &tree.TreeNode{
+				}, Right: &tree.Node[int]{
 					Val: 2,
 				},
 			},
 		},
-		Right: &tree.TreeNode{
+		Right: &tree.Node[int]{
 			Val: 8,
-			Left: &tree.TreeNode{
+			Left: &tree.Node[int]{
 				Val: 13,
 			},
-			Right: &tree.TreeNode{
+			Right: &tree.Node[int]{
 				Val: 4,
-				Left: &tree.TreeNode{
+				Left: &tree.Node[int]{
 					Val: 5,
 				},
-				Right: &tree.TreeNode{
+				Right: &tree.Node[int]{
 					Val: 1,
 				},
 			},

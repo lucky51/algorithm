@@ -8,9 +8,19 @@ import (
 )
 
 func TestCalculate(t *testing.T) {
-	fmt.Println(calculate("1+2+2"))
+	fmt.Println(calculate("(((2+2)+(1+2))/2)-1*2"))
 }
-
+func TestSimpleCalculate(t *testing.T) {
+	fmt.Println(simpleCalculate("6-(2+3)"))
+}
+func TestCalculate1(t *testing.T) {
+	fmt.Println(calculate1(" 42"))
+}
+func TestStr2Bytes(t *testing.T) {
+	var s = "123+"
+	by := []byte(s)
+	fmt.Println(by)
+}
 func TestStack(t *testing.T) {
 	//TODO 这个pkg包中的 stack实现的有问题
 	s := stack.NewStack[int]()
@@ -19,5 +29,4 @@ func TestStack(t *testing.T) {
 	s.Push(3)
 	fmt.Println("size:", s.Size())
 	s.Pop()
-
 }

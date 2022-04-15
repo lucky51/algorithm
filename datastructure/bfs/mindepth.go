@@ -6,11 +6,11 @@ import (
 )
 
 // minDepth 求最小深度
-func minDepth(root *tree.TreeNode) int {
+func minDepth(root *tree.Node[int]) int {
 	if root == nil {
 		return 0
 	}
-	q := queue.NewQueue[*tree.TreeNode]()
+	q := queue.NewQueue[*tree.Node[int]]()
 	q.Offer(root)
 	depth := 1
 	for !q.IsEmpty() {

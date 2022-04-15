@@ -4,14 +4,14 @@ import (
 	"github.com/lucky51/pkg/list"
 )
 
-var left *list.ListNode[int]
+var left *list.Node[int]
 
-func isPalindrome(head *list.ListNode[int]) bool {
+func isPalindrome(head *list.Node[int]) bool {
 	left = head
 	return traverse(head)
 }
 
-func traverse(right *list.ListNode[int]) bool {
+func traverse(right *list.Node[int]) bool {
 	if right == nil {
 		return true
 	}

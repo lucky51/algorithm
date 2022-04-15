@@ -4,7 +4,7 @@ import (
 	slist "github.com/lucky51/pkg/list"
 )
 
-func hasCycle(head *slist.ListNode[int]) bool {
+func hasCycle(head *slist.Node[int]) bool {
 	if head == nil || head.Next == nil {
 		return false
 	}

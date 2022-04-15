@@ -3,7 +3,7 @@ package treeq
 import "github.com/lucky51/pkg/tree"
 
 // lowestCommonAncestor 最近公共祖先
-func lowestCommonAncestor(root, p, q *tree.TreeNode) *tree.TreeNode {
+func lowestCommonAncestor(root, p, q *tree.Node[int]) *tree.Node[int] {
 	if root == nil {
 		return nil
 	}

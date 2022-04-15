@@ -8,11 +8,11 @@ import (
 
 // leetcode 654
 // constructMaximumBinaryTree 最大二叉树
-func constructMaximumBinaryTree(nums []int) *tree.TreeNode {
+func constructMaximumBinaryTree(nums []int) *tree.Node[int] {
 	if len(nums) == 0 {
 		return nil
 	}
-	root := &tree.TreeNode{}
+	root := &tree.Node[int]{}
 	maxnum, maxindex := 0, 0
 	for i := 0; i < len(nums); i++ {
 		if nums[i] > maxnum {
@@ -28,12 +28,12 @@ func constructMaximumBinaryTree(nums []int) *tree.TreeNode {
 
 // leetcode 105
 // 从前序与中序遍历序列构造二叉树
-func buildTree(preorder, inorder []int) *tree.TreeNode {
+func buildTree(preorder, inorder []int) *tree.Node[int] {
 	return build(preorder, inorder, 0, len(preorder)-1, 0, len(inorder)-1)
 }
 
 // build 按区间构建
-func build(preorder, inorder []int, prestart, preend, instart, inend int) *tree.TreeNode {
+func build(preorder, inorder []int, prestart, preend, instart, inend int) *tree.Node[int] {
 	if prestart > preend {
 		return nil
 	}
@@ -44,7 +44,7 @@ func build(preorder, inorder []int, prestart, preend, instart, inend int) *tree.
 			break
 		}
 	}
-	root := &tree.TreeNode{
+	root := &tree.Node[int]{
 		Val: rootval,
 	}
 	leftSize := index - instart
@@ -54,17 +54,17 @@ func build(preorder, inorder []int, prestart, preend, instart, inend int) *tree.
 }
 
 // 从中序、后序遍历顺序构造
-func buildTreePost(inorder, postorder []int) *tree.TreeNode {
+func buildTreePost(inorder, postorder []int) *tree.Node[int] {
 	return buildPost(inorder, postorder, 0, len(inorder)-1, 0, len(postorder)-1)
 }
 
-func buildPost(inorder, postorder []int, instart, inend, poststart, postend int) *tree.TreeNode {
+func buildPost(inorder, postorder []int, instart, inend, poststart, postend int) *tree.Node[int] {
 	if poststart > postend {
 		return nil
 	}
 	fmt.Println(postend)
 	rootVal := postorder[postend]
-	root := &tree.TreeNode{
+	root := &tree.Node[int]{
 		Val: rootVal,
 	}
 	index := 0

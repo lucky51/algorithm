@@ -8,13 +8,13 @@ import (
 )
 
 func TestIsPalindrome(t *testing.T) {
-	head := &list.ListNode[int]{
+	head := &list.Node[int]{
 		Data: 1,
-		Next: &list.ListNode[int]{
+		Next: &list.Node[int]{
 			Data: 2,
-			Next: &list.ListNode[int]{
+			Next: &list.Node[int]{
 				Data: 2,
-				Next: &list.ListNode[int]{
+				Next: &list.Node[int]{
 					Data: 1,
 				},
 			},

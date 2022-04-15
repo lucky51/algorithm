@@ -8,23 +8,23 @@ import (
 )
 
 func TestReverseTree(t *testing.T) {
-	r := tree.TreeNode{
+	r := tree.Node[int]{
 		Val: 10,
-		Left: &tree.TreeNode{
+		Left: &tree.Node[int]{
 			Val: 1,
-			Left: &tree.TreeNode{
+			Left: &tree.Node[int]{
 				Val: 2,
 			},
-			Right: &tree.TreeNode{
+			Right: &tree.Node[int]{
 				Val: 3,
 			},
 		},
-		Right: &tree.TreeNode{
+		Right: &tree.Node[int]{
 			Val: 4,
-			Left: &tree.TreeNode{
+			Left: &tree.Node[int]{
 				Val: 5,
 			},
-			Right: &tree.TreeNode{
+			Right: &tree.Node[int]{
 				Val: 6,
 			},
 		},

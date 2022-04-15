@@ -8,24 +8,24 @@ import (
 )
 
 func TestMinDepth(t *testing.T) {
-	root := &tree.TreeNode{
+	root := &tree.Node[int]{
 		Val: 1,
-		Left: &tree.TreeNode{
+		Left: &tree.Node[int]{
 			Val: 2,
-			Left: &tree.TreeNode{
+			Left: &tree.Node[int]{
 				Val: 4,
-				Right: &tree.TreeNode{
+				Right: &tree.Node[int]{
 					Val: 99,
 				},
 			},
 		},
-		Right: &tree.TreeNode{
+		Right: &tree.Node[int]{
 			Val: 3,
-			Left: &tree.TreeNode{
+			Left: &tree.Node[int]{
 				Val: 6,
-				Left: &tree.TreeNode{
+				Left: &tree.Node[int]{
 					Val: 7,
-					Right: &tree.TreeNode{
+					Right: &tree.Node[int]{
 						Val: 100,
 					},
 				},
