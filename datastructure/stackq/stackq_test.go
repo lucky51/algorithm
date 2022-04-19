@@ -30,3 +30,7 @@ func TestStack(t *testing.T) {
 	fmt.Println("size:", s.Size())
 	s.Pop()
 }
+
+func TestPancakeSort(T *testing.T) {
+	fmt.Println(pancakeSort([]int{3, 2, 4, 1}))
+}

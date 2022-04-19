@@ -110,8 +110,9 @@ func calculate1(s string) int {
 	for i := 0; i < n; i++ {
 		//digital
 		if s[i] >= '0' && s[i] <= '9' {
-			nums += nums*10 + int(s[i]-'0')
+			nums = nums*10 + int(s[i]-'0')
 		}
+		fmt.Println("nums:", nums)
 		fmt.Println("char:", string(s[i]))
 		if ((s[i] < '0' || s[i] > '9') && s[i] != ' ') || i == len(s)-1 {
 			switch sign {
