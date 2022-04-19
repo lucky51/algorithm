@@ -56,7 +56,7 @@ func robrange(nums []int, start, end int) int {
 }
 
 // robTree 树形排列
-func robTree(t *tree.TreeNode) int {
+func robTree(t *tree.Node[int]) int {
 	if t == nil {
 		return 0
 	}
