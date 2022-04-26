@@ -63,6 +63,7 @@ export class LinkedList<T> {
         this.Tail.Prev.Next=e;
         e.Prev=this.Tail.Prev;
         e.Next=this.Tail;
+        this.Tail.Prev =e;
     }
     print(){
         if(this.count==0){
@@ -79,7 +80,7 @@ export class LinkedList<T> {
         // back to front
         let temp1 = this.Tail;
         let p = [];
-        while(temp!=null){
+        while(temp1!=null){
             p.push(temp1.Value);
             temp1 = temp1.Prev
         }

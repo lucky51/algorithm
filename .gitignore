@@ -1,2 +1,4 @@
 .vscode/
 .idea/
+ts/*.js
+ts/node_modules/

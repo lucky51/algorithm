@@ -5,5 +5,9 @@
   "license": "MIT",
   "scripts": {
     "start": "tsc && node index.js"
-  }
+  },
+  "dependencies": {
+    "@ptkdev/logger": "^1.8.0"
+  },
+  "devDependencies": {}
 }
