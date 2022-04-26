@@ -16,7 +16,7 @@ export class LinkedList<T> {
     get Count(){
         return this.count;
     }
-    pushToBack(value:T) {
+    pushToBack(value:T):ListNode<T> {
         let newNode=new ListNode<T>();
         newNode.Value=value;
         this.Tail.Prev.Next=newNode;
@@ -24,8 +24,9 @@ export class LinkedList<T> {
         newNode.Next=this.Tail;
         this.Tail.Prev =newNode;
         this.count++;
+        return newNode;
     }
-    pushToFront(value:T) {
+    pushToFront(value:T) :ListNode<T>{
         let newNode=new ListNode<T>();
         newNode.Value=value;
         let first =this.Head.Next;
@@ -34,6 +35,7 @@ export class LinkedList<T> {
         newNode.Prev = this.Head;
         this.Head.Next=newNode;
         this.count++;
+        return newNode;
     }
     front() :ListNode<T> |null {
         if(this.count==0){
@@ -53,7 +55,7 @@ export class LinkedList<T> {
         this.count--;
     }
     moveToBack(e:ListNode<T>|null){
-        if(e==null ||e.Next==this.Tail ){
+        if(e==null  ||e.Next==this.Tail ){
             return
         }
         e.Prev.Next = e.Next;
@@ -73,7 +75,7 @@ export class LinkedList<T> {
             n.push(temp.Value)
             temp = temp.Next;
         }
-        console.log('front to back:',n);
+        console.log('front to back:',JSON.stringify(n));
         // back to front
         let temp1 = this.Tail;
         let p = [];
@@ -81,8 +83,6 @@ export class LinkedList<T> {
             p.push(temp1.Value);
             temp1 = temp1.Prev
         }
-        console.log('back to front:',p);
+        console.log('back to front:',JSON.stringify(p));
     }
 }
-
-//const  pt = new ListNode();

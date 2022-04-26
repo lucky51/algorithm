@@ -1,6 +1,6 @@
 import { ListNode,LinkedList } from "./list";
 
-
+import { LRUCache } from "./lru";
 let list = new LinkedList<number>();
 
 list.print();
@@ -20,3 +20,16 @@ list.moveToBack(first1)
 
 list.print();
 
+// let c =new LRUCache<number>(2);
+// console.log(c.get("1"))
+// c.push("1",1)
+// c.push("2",2)
+// c.print();
+
+// console.log(c.get("1"))
+// c.print();
+
+// console.log(c.get("2"))
+// c.push("1",1)
+// c.push("1",1)
+// c.print();
