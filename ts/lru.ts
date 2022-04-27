@@ -1,5 +1,5 @@
 
-import { LinkedList, ListNode } from "./list";
+import { LinkedList, ListNode,ILogger ,PrintDirection} from "./list";
 
 class LRUCacheItem<T>{
     private _key: string
@@ -55,7 +55,7 @@ export class LRUCache<T> {
     get(key: string): T | null {
         return this.getCacheNode(key)?.Value?.Data ?? null
     }
-    print(){
-        this._list.print();
+    print(logger:ILogger,direction:PrintDirection){
+        this._list.print(logger,direction);
     }
 }
