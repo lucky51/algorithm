@@ -101,7 +101,6 @@ func TestSuperEggDrop(t *testing.T) {
 }
 
 func TestDpMaxCoins(t *testing.T) {
-
 	fmt.Println(maxCoins([]int{3, 1, 5, 8}))
 }
 func TestKnapsack(t *testing.T) {
